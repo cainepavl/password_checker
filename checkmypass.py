@@ -1,7 +1,16 @@
 import requests
 import hashlib
 import sys
+import os
+import colorama
+from colorama import Fore, Style
 
+def clear_screen():
+    if os.name == 'nt':
+        _=os.system('cls')
+    else:
+        _=os.system('clear')
+        
 def request_api_data(query_char):
     url = 'https://api.pwnedpasswords.com/range/' + query_char
     res = requests.get(url)
@@ -27,9 +36,10 @@ def main(args):
     for password in args:
         count = pwned_api_check(password)
         if count:
-            print(f'{password} was found {count} times...You should change it!')
+            clear_screen()
+            print(f'{Fore.RED}{password} was found {count} times...{'\n'}You should change it!{Style.RESET_ALL}')
         else:
-            print(f'{password} is good to go!')
+            print(f'{Fore.GREEN}{password} is good to go!{Style.RESET_ALL}')
     return 'DONE'
 
 if __name__ == '__main__':
