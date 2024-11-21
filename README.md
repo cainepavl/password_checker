@@ -31,18 +31,20 @@ cd password-checker
 2. Run the program with your passwords as command-line arguments:
 
 ```
-python password_checker.py password1 password2 password3
+python3 password_checker.py password1 password2 password3
 ```
 
 ... replace `password1`, `password2`, and `password3` with the passwords you want to check.
 
 ## Example Output
 
+For a SAFE password the output will be GREEN:
 ```
-password123 was found 5 times...  
-You should change it!
+password123 was found 5 times...</span> 
+You should change it!</span> 
 ```
 
+For a BREACHED password the output will be RED:
 ```
 mySecurePassword is good to go!
 ```
@@ -63,7 +65,7 @@ Contributions are welcome! If you have suggestions for improvements or features,
 
 ## License
 
-This project is licensed under the MIT License - see the  file for details.
+This project is licensed under the MIT License - [LICENSE](https://github.com/cainepavl/password_checker/blob/main/LICENSE) see the  file for details.
 
 ## Acknowledgments
 
