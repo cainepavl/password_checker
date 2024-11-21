@@ -67,6 +67,8 @@ This project is licensed under the MIT License - see the  file for details.
 
 ## Acknowledgments
 
-https://haveibeenpwned.com/ for providing the API.
+[HAVE I BEEN PWNED](https://haveibeenpwned.com/) for providing the API.
 
-https://pypi.org/project/colorama/ for terminal color formatting.
+[COLORAMA](https://pypi.org/project/colorama/) for terminal color formatting.
+
+[ZTM Academy](https://zerotomastery.io/courses/) for the course and walkthrough creating this site!
