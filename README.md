@@ -10,14 +10,14 @@ A simple command-line tool that checks if your passwords have been compromised u
 
 ## Requirements  
 
-- Python 3.x  
+- Python 3.x installed on your machine. You can download it from [Python](https://github.com/cainepavl/portfo/blob/main/LICENSE)
 - `requests` library  
 - `colorama` library  
 
 You can install the required libraries using pip: 
 
 ```bash  
-pip install requests colorama 
+pip3 install requests colorama 
 ```
 ## Usage
 
@@ -44,7 +44,7 @@ password123 was found 5 times...</span>
 You should change it!</span> 
 ```
 
-For a BREACHED password the output will be RED:
+For a COMPROMISED password the output will be RED:
 ```
 mySecurePassword is good to go!
 ```
@@ -74,3 +74,7 @@ This project is licensed under the MIT License - [LICENSE](https://github.com/ca
 [COLORAMA](https://pypi.org/project/colorama/) for terminal color formatting.
 
 [ZTM Academy](https://zerotomastery.io/courses/) for the course and walkthrough creating this site!
+
+## Contact
+
+If you have any questions, feel free to contact me at cainepavl@outlook.com
