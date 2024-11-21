@@ -1,6 +1,17 @@
 # Password Checker
 
-A simple command-line tool that checks if your passwords have been compromised using the [Have I Been Pwned](https://haveibeenpwned.com/) API. This tool helps users ensure their passwords are secure and encourages them to change compromised passwords.  
+A simple command-line tool that checks if your passwords have been compromised using the [Have I Been Pwned](https://haveibeenpwned.com/) API. This tool helps users ensure their passwords are secure and encourages them to change compromised passwords. 
+
+## Table of Contents
+
+- [Features](#features)
+- [Requirements](#requirements)
+- [Usage](#usage)
+- [Example Output](#exampleoutput)
+- [How it Works](#howitworks)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
 ## Features
 
