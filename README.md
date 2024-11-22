@@ -30,6 +30,9 @@ You can install the required libraries using pip:
 ```bash  
 pip3 install requests colorama 
 ```
+```
+pip3 install colorama
+```
 ## Usage
 
 1. Clone this repository:
