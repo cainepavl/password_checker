@@ -38,8 +38,8 @@ pip3 install colorama
 1. Clone this repository:
    
 ```
-git clone https://github.com/cainepavl/password-checker.git  
-cd password-checker
+git clone https://github.com/cainepavl/password_checker.git  
+cd password_checker
 ```
    
 2. Run the program with your passwords as command-line arguments:
