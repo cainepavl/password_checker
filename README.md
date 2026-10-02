@@ -23,7 +23,9 @@ A simple command-line tool that checks if your passwords have been compromised u
 
 ## ✨ Features
 
-- Check multiple passwords at once.
+- Check one or more passwords in a single session.
+- Hidden input via `getpass` — passwords are never echoed to the screen,
+  stored in shell history, or visible to other users via `ps`.
 - Clear console output for better readability.
 - Color-coded output indicating password security status.
 
@@ -63,13 +65,25 @@ pip3 install requests colorama
 
 ## 🚀 Usage
 
-Run the program with your passwords as command-line arguments:
+Run the script and enter passwords when prompted. Input is hidden as you type:
 
 ```bash
-python3 password_checker.py password1 password2 password3
+python3 checkmypass.py
 ```
 
-Replace `password1`, `password2`, and `password3` with the passwords you want to check.
+```
+Enter a password to check (input hidden). Press Enter on a blank line to finish.
+
+Password:
+```
+
+Check as many passwords as you like, one per prompt — press Enter on a
+blank line when you're done.
+
+> Earlier versions of this script accepted passwords as command-line
+> arguments (`python3 checkmypass.py password1 password2`). That approach
+> left plaintext passwords sitting in shell history and visible to other
+> local users via `ps`, so it was replaced with a hidden `getpass` prompt.
 
 ---
 
@@ -78,25 +92,24 @@ Replace `password1`, `password2`, and `password3` with the passwords you want to
 For a **SAFE** password the output will be GREEN:
 
 ```
-mySecurePassword is good to go!
+Not found in any known breach -- good to go!
 ```
 
 For a **COMPROMISED** password the output will be RED:
 
 ```
-password123 was found 5 times...
-You should change it!
+Found in 5 breach(es)... You should change it!
 ```
 
 ---
 
 ## 🔍 How It Works
 
-1. **Password Hashing**: The program takes each password, hashes it using SHA-1, and sends the first 5 characters of the hash to the Have I Been Pwned API.
+1. **Password Hashing**: The program takes each password, hashes it using SHA-1, and sends only the first 5 characters of the hash to the Have I Been Pwned API — a k-anonymity model, so the full hash (and the password itself) never leaves your machine.
 
 2. **API Response**: The API returns a list of hashes that start with those 5 characters, allowing the program to check how many times the full password hash appears in the database.
 
-3. **Output**: The program displays whether each password is compromised or secure, with color-coded messages for better visibility.
+3. **Output**: The program displays whether each password is compromised or secure, with color-coded messages for better visibility. The password itself is never printed back to the terminal.
 
 ---
 
